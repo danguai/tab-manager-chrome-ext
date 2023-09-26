@@ -1,0 +1,18 @@
+{
+  "name": "chrome-extension-template",
+  "short_name": "chrome-extension-template",
+  "description": "A basic Chrome Extension template",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
