@@ -59,3 +59,7 @@
 .dropdown--item:hover {
   background-color: #9fc3f870;
 }
+
+.line--divider {
+  border-bottom: 1px solid black;
+}
