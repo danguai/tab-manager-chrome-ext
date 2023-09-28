@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-template",
-  "short_name": "chrome-extension-template",
-  "description": "A basic Chrome Extension template",
+  "name": "Tab Manager Chrome Extension",
+  "short_name": "Tab Mngr Chrome Ext",
+  "description": "Tab Manager by color & category Chrome Extension",
   "version": "0.0.1",
   "manifest_version": 3,
   "action": {
