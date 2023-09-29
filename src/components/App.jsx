@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-import DropdownCategories from './Categories';
+import Dropdown from './Dropdown';
 
 const App = () => {
   const options = [
@@ -12,8 +12,8 @@ const App = () => {
 
   return (
     <div className="maxSize">
-      <h3 className="titles">TAB MANAGER</h3>
-      <DropdownCategories placeholder="Select..." options={options} />
+      <div className="title">TAB MANAGER</div>
+      <Dropdown placeholder="Select..." options={options} />
     </div>
   )
 };

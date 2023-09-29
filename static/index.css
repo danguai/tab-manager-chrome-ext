@@ -1,32 +1,8 @@
 :root {
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Staatliches', cursive; */
     font-family: 'Bebas Neue', sans-serif;
-
-    --bg-color: #DDDDDD;
-
-    --white: #ffffff;
-    --blue-color: #2E4A63;
-    --red-color: #DC0022;
-    --green-color: #227C00;
-    --main-red-disabled: #d2a2a9;
-    --main-orange: #F99223;
-    --rollover-color: #3DA0A5;
 }
 
 body {
     margin: 0px;
     background-color: var(--bg-color);
-}
-
-input {
-    padding: 0 10px;
-}
-
-button {
-    cursor: pointer;
-}
-
-ul {
-    list-style-type: none;
 }
