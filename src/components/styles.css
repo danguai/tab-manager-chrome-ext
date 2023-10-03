@@ -80,6 +80,10 @@
 
 .categories {
   font-family: "Bebas Neue", sans-serif;
+  width: 110px;
+  height: 25px;
+  border: 0px;
+  /* border-radius: 4px; */
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -102,6 +106,10 @@
 
 .dropdown--menu {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transform: translateY(40px);
   width: 100%;
   border: 1px solid #ccc;
@@ -112,7 +120,9 @@
 }
 
 .dropdown--item {
-  /* padding: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 

@@ -14,7 +14,7 @@ const Categories = ({ options }) => {
     const selectCategory = () => (
         <div className="dropdown--menu">
             {options.map(option => (
-                <div
+                <button
                     onClick={option => { setCategoryDropdown(option.name) }}
                     role="button"
                     key={option.name}
@@ -25,14 +25,15 @@ const Categories = ({ options }) => {
                         fontWeight: 'bold',
                     }}>
                     {option.name}
-                </div>
+                </button>
             ))}
         </div>
     );
 
     const selectedCategory = ({ option }) => {
-        if (!selectCat) return 'CATEGORY';
-        return option.name;
+        if (!categoryDropdown) return 'CATEGORY';
+        const choosenCategory = setCategoryDropdown(option);
+        return choosenCategory;
     };
 
     const showMenu = (e) => {
