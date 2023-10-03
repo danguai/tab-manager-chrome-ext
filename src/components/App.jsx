@@ -1,10 +1,22 @@
 import React from 'react';
 import './styles.css';
 
-const App = () => (
-  <div className="maxSize">
-    <h1>Chrome Extension Template</h1>
-  </div>
-);
+import Dropdown from './Dropdown';
+// import Categories from './Categories';
+
+const App = () => {
+  const options = [
+    { name: 'ENTERTAINMENT', color: '#2E4A63' },
+    { name: 'WORK', color: '#DC0022' },
+    { name: 'NEWS', color: '#227C00' },
+  ];
+
+  return (
+    <div className="maxSize">
+      <div className="title">TAB MANAGER</div>
+      <Dropdown placeholder="Select..." options={options} />
+    </div>
+  )
+};
 
 export default App;
