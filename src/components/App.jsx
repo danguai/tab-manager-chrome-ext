@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 
 import Dropdown from './Dropdown';
+// import Categories from './Categories';
 
 const App = () => {
   const options = [

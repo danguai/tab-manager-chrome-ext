@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Categories from './Categories';
 
 import './styles.css';
 
@@ -10,11 +11,9 @@ const Icon = () => (
 
 const Dropdown = ({ placeholder, options }) => {
   const [unread, setUnread] = useState(false);
-
   const [activate, setActivate] = useState(false);
 
-  const [dropdownMenu, setDropdownMenu] = useState(false);
-  const [selectCat, setSelectCat] = useState(null);
+  // const [selectCat, setSelectCat] = useState(null);
 
   // useEffect(() => {
   //   const handler = () => setDropdownMenu(!dropdownMenu);
@@ -32,40 +31,6 @@ const Dropdown = ({ placeholder, options }) => {
   const activateButtonName = () => {
     if (activate) return 'ACTIVE';
     return 'INACTIVE';
-  };
-  const isSelected = (option) => {
-    if (!selectCat) return false;
-    return selectCat.name === option.name;
-  };
-
-  const selectCategory = () => (
-    <>
-      <div className="dropdown--menu">
-        {options.map(option => (
-          <div
-            onClick={(option => setSelectCat(option))}
-            key={option.name}
-            className={`dropdown--item categories`}
-            style={{
-              background: `${option.color}`,
-              color: '#fff',
-              fontWeight: 'bold',
-            }}>
-            {option.name}
-          </div>
-        ))}
-      </div>
-    </>
-  );
-
-  const showMenu = (e) => {
-    e.stopPropagation();
-    setDropdownMenu(!dropdownMenu);
-  };
-
-  const getDisplay = () => {
-    if (selectCat) return selectCat.name;
-    return placeholder;
   };
 
   return (
@@ -89,19 +54,9 @@ const Dropdown = ({ placeholder, options }) => {
       <div className="line--divider" />
       <div className="read-unread">NOTES</div>
       <div className="line--divider" />
+
       <div className="dropdown--container">
-        <div onClick={showMenu} className="category--title">CATEGORIES</div>
-        <div>
-          {dropdownMenu && (
-            <div className="dropdown--input">
-              <div className="dropdown--selected--value">{getDisplay()}</div>
-              {selectCategory()}
-              <div className="dropdown--tools">
-                <div className="dropdown--tool"><Icon /></div>
-              </div>
-            </div>
-          )}
-        </div>
+        {Categories({ options })}
       </div>
     </>
   );
